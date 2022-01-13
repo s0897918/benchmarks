@@ -1,0 +1,20 @@
+./bin/gemm fp32
+data type is fp32, cublasSgemm test result:
+running with min_m_k_n: 2 max_m_k_n: 32768 repeats: 1
+allocating device variables
+start run gemm on GPUs
+float64: size 2 average: 0.000424032 s 
+float64: size 4 average: 1.3696e-05 s 
+float64: size 8 average: 7.936e-06 s 
+float64: size 16 average: 7.84e-06 s 
+float64: size 32 average: 2.7616e-05 s 
+float64: size 64 average: 2.3808e-05 s 
+float64: size 128 average: 5.6736e-05 s 
+float64: size 256 average: 1.8848e-05 s 
+float64: size 512 average: 4.6752e-05 s 
+float64: size 1024 average: 0.000219168 s 
+float64: size 2048 average: 0.00129664 s 
+float64: size 4096 average: 0.0102016 s 
+float64: size 8192 average: 0.0788924 s 
+float64: size 16384 average: 0.649842 s 
+float64: size 32768 average: 5.01534 s 
