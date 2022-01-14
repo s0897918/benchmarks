@@ -4,8 +4,6 @@
 #include <assert.h>
 #include <cuda_runtime.h>
 #include <cublas_v2.h>
-#include "fp16_conversion.h"
-
 
 using namespace std;
 #define debug 0
@@ -24,9 +22,6 @@ const char* cublasGetErrorString(cublasStatus_t status)
     }
     return "unknown error";
 }
-
-// Convenience function for checking CUDA runtime API results
-// can be wrapped around any runtime API call. No-op in release builds.
 
 cudaError_t checkCuda(cudaError_t result)
 {
@@ -78,7 +73,7 @@ void print_debug_info(float *hh, int size)
 
 int main(int argc, char ** argv)
 {
-  	int min_m_k_n = 4096*8;
+  	int min_m_k_n = 64;
   	int max_m_k_n = 4096*8;
   	int repeats = 1;
 
